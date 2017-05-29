@@ -28,17 +28,6 @@ export CRUSH_DATA_DIR=/tmp/crush.data
 666B81D6-3F8A-4D57-BA3F-11FA8FC47246
 ````
 
-`set` also supports piping into it:
-
-````
-echo '{"key":"value"}' | crush set
-4472B861-4C10-4C0A-A63B-E5D45AA679C0
-````
-````
-cat foobar.json | crush set
-9DF4DC1F-121E-46DC-B580-E1663B645AED
-````
-
 ### get
 
 > get \<document-id\> - Retrieves a json document by document id
