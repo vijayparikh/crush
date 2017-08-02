@@ -81,16 +81,24 @@ Drop database '/tmp/crush.data'? [Y/n] Y
 
 ````
 ➜ crush help
-Usage: crush command <command-specific-options>
+A simple, self-contained, serverless, zero-configuration, json document store.
 
-  set <json>             Writes a json document and returns a document id
-  get <document-id>      Retrieves a json document by document id
-  count                  Total number of json documents in the database
-  delete <document-id>   Deletes a json document by document id
-  drop (--force)         Drops the database
-  help                   Displays help
-  version                Displays the current version
+Usage: crush [options] {count | delete | drop | get | help | set | version}
 
+Available commands:
+    count             Total number of json documents in the database
+    delete            Deletes a json document by document id
+    drop              Drops the database
+    get               Retrieves a json document by document id
+    help (*)          Provide help for individual commands
+    set               Writes a json document and returns the document id
+    version           Show the version of the program
+
+Options (take precedence over global options):
+    -v, --version                    Show the version of the program
+
+Global Options:
+    -h, --help                       Show help
 ````
 
 ### version
@@ -108,19 +116,24 @@ Usage: crush command <command-specific-options>
 
 ```
 ➜ crush
-crush 1.1.0
-  data directory path: /tmp/crush.data
+A simple, self-contained, serverless, zero-configuration, json document store.
 
-Usage: crush command <command-specific-options>
+Usage: crush [options] {count | delete | drop | get | help | set | version}
 
-  set <json>             Writes a json document and returns a document id
-  get <document-id>      Retrieves a json document by document id
-  count                  Total number of json documents in the database
-  delete <document-id>   Deletes a json document by document id
-  drop (--force)         Drops the database
-  help                   Displays help
-  version                Displays the current version
+Available commands:
+    count             Total number of json documents in the database
+    delete            Deletes a json document by document id
+    drop              Drops the database
+    get               Retrieves a json document by document id
+    help (*)          Provide help for individual commands
+    set               Writes a json document and returns the document id
+    version           Show the version of the program
 
+Options (take precedence over global options):
+    -v, --version                    Show the version of the program
+
+Global Options:
+    -h, --help                       Show help
 ```
 
 ## Support, Bugs, And Feature Requests
