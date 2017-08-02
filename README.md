@@ -107,7 +107,8 @@ Global Options:
 
 ````
 ➜ crush version
-1.1.0
+A simple, self-contained, serverless, zero-configuration, json document store.
+crush 0.0.0
 ````
 
 ### default
