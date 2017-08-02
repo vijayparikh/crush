@@ -10,13 +10,17 @@ module Crush
 
   class Implementation
     def add(json_payload) 
-    	id = SecureRandom.uuid
-    	FileUtils.mkdir_p(record_location(id))
-    	location = File.join(record_location(id), id+'.json')
-    	File.open(location,"w") do |f|
-    	  f.write(JSON.pretty_generate(JSON.parse(json_payload)))
-    	  id
-  	  end
+      if valid_json?(json_payload)
+      	id = SecureRandom.uuid
+      	FileUtils.mkdir_p(record_location(id))
+      	location = File.join(record_location(id), id+'.json')
+      	File.open(location,"w") do |f|
+      	  f.write(JSON.pretty_generate(JSON.parse(json_payload)))
+      	  id
+    	  end
+      else
+        STDERR.puts "Error: Invalid JSON"
+      end
     end
 
     def get(document_id)
@@ -45,6 +49,13 @@ module Crush
     end
 
     private
+    
+    def valid_json?(json)
+      JSON.parse(json)
+      return true  
+    rescue JSON::ParserError => e  
+      return false
+    end
 
     def db_directory
       if ENV['CRUSH_DATA_DIR'].nil?
