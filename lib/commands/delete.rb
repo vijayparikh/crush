@@ -10,7 +10,7 @@ module Command
 
   	def execute(document_id)
   	  crush = Crush::Implementation.new
-  	  crush.delete(dcoument_id)  
+  	  crush.delete(document_id)  
   	end
   end
 end

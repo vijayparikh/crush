@@ -2,7 +2,8 @@ require 'rubygems'
 require 'securerandom'
 require 'fileutils'
 require 'json'
-
+require 'tmpdir'
+ 
 module Crush
 
   VERSION='0.0.0'
@@ -47,7 +48,7 @@ module Crush
 
     def db_directory
       if ENV['CRUSH_DATA_DIR'].nil?
-      	File.join(Dir.pwd, "crush.data") 
+      	File.join(Dir.tmpdir, "crush.data") 
       else
       	ENV['CRUSH_DATA_DIR']
       end

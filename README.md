@@ -12,7 +12,7 @@ You may optionally set the path to the data directory. It defaults to `$PWD/curs
 
 ````
 # default
-export CRUSH_DATA_DIR="$PWD"/crush.data
+export CRUSH_DATA_DIR="$TMPDIR"/crush.data
 
 # manually set the data directory path
 export CRUSH_DATA_DIR=/tmp/crush.data
