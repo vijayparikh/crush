@@ -111,32 +111,6 @@ A simple, self-contained, serverless, zero-configuration, json document store.
 crush 0.0.0
 ````
 
-### default
-
-> default - Displays the current version, configuration, and help
-
-```
-➜ crush
-A simple, self-contained, serverless, zero-configuration, json document store.
-
-Usage: crush [options] {count | delete | drop | get | help | set | version}
-
-Available commands:
-    count             Total number of json documents in the database
-    delete            Deletes a json document by document id
-    drop              Drops the database
-    get               Retrieves a json document by document id
-    help (*)          Provide help for individual commands
-    set               Writes a json document and returns the document id
-    version           Show the version of the program
-
-Options (take precedence over global options):
-    -v, --version                    Show the version of the program
-
-Global Options:
-    -h, --help                       Show help
-```
-
 ## Support, Bugs, And Feature Requests
 
 Create issues here in GitHub (https://github.com/vijayparikh/crush/issues).
