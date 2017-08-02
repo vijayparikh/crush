@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'crush'
+require 'cmdparse'
+require 'commands'
+
+parser = CmdParse::CommandParser.new(handle_exceptions: :no_help)
+parser.main_options.program_name = "crush"
+spec = Crush::VERSION
+parser.main_options.version = Crush::VERSION
+parser.main_options.banner = "A simple, self-contained, serverless, zero-configuration, json document store."
+parser.add_command(CmdParse::HelpCommand.new, default: true)
+parser.add_command(CmdParse::VersionCommand.new)
+parser.add_command(Command::Set.new)
+parser.add_command(Command::Get.new)
+parser.add_command(Command::Count.new)
+parser.add_command(Command::Delete.new)
+parser.add_command(Command::Drop.new)
+parser.parse
