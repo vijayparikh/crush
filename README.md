@@ -8,7 +8,7 @@ While this is not the speediest of storage soultion it is simple - with the bene
 
 ## Configuration
 
-You may optionally set the path to the data directory. It defaults to `$PWD/cursh.data` but can manually be set with the `CRUSH_DATA_DIR` environment variable.
+You may optionally set the path to the data directory. It defaults to `$TMPDIR/cursh.data` but can manually be set with the `CRUSH_DATA_DIR` environment variable.
 
 ````
 # default
