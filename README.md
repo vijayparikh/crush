@@ -1,5 +1,5 @@
 # Crush
-> dude duuude focus duded duuude oh so hey dude lol!!!
+> dude. duuude. focus dude. duuude. oh! so, hey dude. LOL!!!
 #### A simple, self-contained, serverless, zero-configuration, json document store.
 
 <img align="left" src="https://github.com/vijayparikh/crush/blob/master/img/Crush-FN.png" width="25%"/> Crush sandboxes the current working directory similar to SQLite. The crush data directory is named `crush.data` by default, and each json document is saved pretty printed as a uuid.
